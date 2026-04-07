@@ -116,9 +116,9 @@ void setup() {
 	pinMode(BUZZER,    OUTPUT);
 	pinMode(RELAY_PIN, OUTPUT);
 	digitalWrite(RELAY_PIN, HIGH);
-	if (!display.begin(0x00)) {
+if (!display.begin(0x00)) {
 		Serial.println("SSD1306 init failed");
-		while (true);
+		while (true); // halt if display init fails
 	}
 	display.clearDisplay();
 	display.display();
@@ -140,4 +140,5 @@ void loop() {
 	display.display();
 	leds_all(LOW);
 	delay(1000);
+	
 }
