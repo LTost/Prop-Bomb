@@ -30,6 +30,7 @@ void tone_play(int pin, int freq, int duration_ms) {
 	}
 }
 
+// Extra function to make it easier to call 
 void beep(int freq, int ms) {
 	tone_play(BUZZER, freq, ms);
 }
@@ -77,7 +78,7 @@ void leds_blink_fast(int times) {
 	}
 }
 
-//
+// Countdown tick
 void tick(int n) {
 	show_number(n);
 	int freq = 400 + (5 - n) * 120;
